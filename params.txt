@@ -1,0 +1,6 @@
+learning_rate: 1e-4
+batch_size: 32
+epochs: 20
+model: ResNet-50
+loss_function: CrossEntropyLoss
+optimizer: Adam with weight decay

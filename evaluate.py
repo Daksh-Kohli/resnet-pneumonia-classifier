@@ -18,6 +18,8 @@ with torch.no_grad():
         preds = torch.argmax(outputs, dim=1)
         all_preds.extend(preds.cpu().numpy())
         all_labels.extend(labels.cpu().numpy())
+from sklearn.metrics import accuracy_score
+print("Accuracy:", accuracy_score(all_labels, all_preds))
 
 print("Classification Report:\n", classification_report(all_labels, all_preds))
 print("Confusion Matrix:\n", confusion_matrix(all_labels, all_preds))
